@@ -28,24 +28,17 @@ function draw_table()
                         });
                         });
 
+    //This function will validate if the item and/or price are null and display an alert message to the user
     $(document).submit(function() {
     if($('input#item').val()== null || $('input#item').val() ==""){
         alert('An item must be entered!');      
         return false;
     }
-    
     if($('input#unitPrice').val()== null || $('input#unitPrice').val() ==""){
         alert('A price must be entered!');      
         return false;
     }
     });
-
-    /*$(document).submit(function() {
-    if($('input#unitPrice').val()== null || $('input#unitPrice').val() ==""){
-        alert('A price must be entered!');      
-        return false;
-    }
-    });*/
 
 };
 
