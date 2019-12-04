@@ -16,6 +16,17 @@ function draw_table()
 		});
 	};
 	$.getJSONuncached("/get/html")
+
+    //This piece of code in JavaScript forces the fild "Price" to always format an integer
+    //as a decimal number eg. ".00" or rounding it to the next two decimal number in case of more
+    //than two places after "."
+    $(document).ready(function(){
+                        $('input#unitPrice').blur(function(){
+                        var num = parseFloat($(this).val());
+                        var cleanNum = num.toFixed(2);
+                        $(this).val(cleanNum);
+                        });
+                        });
 };
 
 function select_row()
