@@ -27,6 +27,26 @@ function draw_table()
                         $(this).val(cleanNum);
                         });
                         });
+
+    $(document).submit(function() {
+    if($('input#item').val()== null || $('input#item').val() ==""){
+        alert('An item must be entered!');      
+        return false;
+    }
+    
+    if($('input#unitPrice').val()== null || $('input#unitPrice').val() ==""){
+        alert('A price must be entered!');      
+        return false;
+    }
+    });
+
+    /*$(document).submit(function() {
+    if($('input#unitPrice').val()== null || $('input#unitPrice').val() ==""){
+        alert('A price must be entered!');      
+        return false;
+    }
+    });*/
+
 };
 
 function select_row()
