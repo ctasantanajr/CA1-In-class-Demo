@@ -6,10 +6,6 @@
       <price>6.00</price>
     </entree>
     <entree>
-      <item>Gyosa Dumpling (6 units)</item>
-      <price>6.00</price>
-    </entree>
-    <entree>
       <item>Ceviche</item>
       <price>8.00</price>
     </entree>
@@ -93,10 +89,6 @@
     </entree>
     <entree>
       <item>Orange Juice</item>
-      <price>3.00</price>
-    </entree>
-    <entree>
-      <item>Lemon Juice</item>
       <price>3.00</price>
     </entree>
   </section>
