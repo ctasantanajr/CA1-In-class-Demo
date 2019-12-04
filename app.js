@@ -61,7 +61,7 @@ router.post('/post/json', function(req, res) {
     // Function to read in XML file, convert it to JSON, add a new object and write back to XML file
     xmlFileToJs('SushiBrazil.xml', function(err, result) {
       if (err) throw (err);
-      result.cafemenu.section[obj.sec_n].entree.push({'item': obj.item, 'price': obj.price});
+      result.sushimenu.section[obj.sec_n].entree.push({'item': obj.item, 'price': obj.price});
       console.log(result);
       jsToXmlFile('SushiBrazil.xml', result, function(err) {
         if (err) console.log(err);

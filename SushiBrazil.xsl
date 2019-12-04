@@ -4,7 +4,7 @@
                 <table id="menuTable" class="indent">
                     <thead>
                         <tr>
-                            <th colspan="4">Sushi Brazil Menu</th>
+                            <th colspan="3">Sushi Brazil Menu</th>
                         </tr>
                         <tr>
                             <th>Select</th>
@@ -15,7 +15,7 @@
                     <tbody>
                         <xsl:for-each select="/sushimenu/section">
                             <tr>
-                                <td colspan="3">
+                                <td colspan="4">
                                     <xsl:value-of select="@name" />
                                 </td>
                             </tr>
