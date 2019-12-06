@@ -5,7 +5,7 @@ var http = require('http'),
     xmlParse = require('xslt-processor').xmlParse,
     xsltProcess = require('xslt-processor').xsltProcess,
     xml2js = require('xml2js'),
-    expAutoSan = require('express-autosanitizer');
+    expAutoSan = require('express-autosanitizer'); //this module does the sanitisation of user input on the client-side
 
 var router = express();
 var server = http.createServer(router);
@@ -13,7 +13,7 @@ var server = http.createServer(router);
 router.use(express.static(path.resolve(__dirname, 'views')));
 router.use(express.urlencoded({extended: true}));
 router.use(express.json());
-router.use(expAutoSan.allUnsafe);
+router.use(expAutoSan.allUnsafe); //it sanitises all data coming from user input
 
 // Function to read in XML file and convert it to JSON
 function xmlFileToJs(filename, cb) {
